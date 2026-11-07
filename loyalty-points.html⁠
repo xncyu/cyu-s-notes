@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>客戶忠誠度計畫 - cyu 的筆記庫</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-text: #333333;
+            --accent-color: #F5E6D3; /* 奶茶色 */
+            --bg-color: #FAFAFA;
+            --container-bg: #FFFFFF;
+            --border-color: #EAEAEA;
+        }
+        body { font-family: 'Noto Sans TC', sans-serif; background-color: var(--bg-color); color: var(--primary-text); line-height: 1.8; margin: 0; padding: 20px; }
+        .container { max-width: 760px; margin: 0 auto; padding: 30px; background: var(--container-bg); border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
+        h1 { color: #4A3F35; border-bottom: 2px solid var(--accent-color); padding-bottom: 8px; }
+        .back-btn { display: inline-block; margin-bottom: 20px; text-decoration: none; color: #666; background-color: var(--accent-color); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; }
+        /* 會計分錄專屬樣式 */
+        .journal-entry { width: 100%; border-collapse: collapse; margin: 20px 0; font-family: monospace; font-size: 1rem; background-color: #FAFAFA; border-radius: 8px; overflow: hidden; }
+        .journal-entry th, .journal-entry td { padding: 10px 15px; border: 1px solid var(--border-color); }
+        .journal-entry th { background-color: var(--accent-color); color: #4A3F35; }
+        .journal-entry .credit { padding-left: 40px; }
+        .journal-entry .amount { text-align: right; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="index.html" class="back-btn">← 返回目錄</a>
+    
+    <h1>客戶忠誠度計畫：為何構成重大權利？</h1>
+    <p><strong>日期：</strong>2026-11-07</p>
+    <p><strong>情境：</strong> 當客戶購買商品時，我們會發放「忠誠點數」，未來可折抵消費。這種點數儘管有其單獨售價 (Standalone selling price)，但因為它提供客戶「不訂立合約就無法取得」的重大權利 (Material right)，因此必須作為單獨的履約義務並分攤交易價格。</p>
+    
+    <h3>會計分錄範例</h3>
+    <table class="journal-entry">
+        <thead>
+            <tr>
+                <th>日期</th>
+                <th>會計科目</th>
+                <th>借方 (Dr.)</th>
+                <th>貸方 (Cr.)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>11/07</td>
+                <td>現金 (Cash)</td>
+                <td class="amount">100,000</td>
+                <td class="amount"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="credit">銷貨收入 (Sales Revenue)</td>
+                <td class="amount"></td>
+                <td class="amount">95,000</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="credit">合約負債－忠誠點數 (Contract Liability)</td>
+                <td class="amount"></td>
+                <td class="amount">5,000</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <p><strong>結論：</strong>必須將收到的現金分攤給「商品」與「點數」，等到客戶未來實際使用點數時，才能將「合約負債」轉為「收入」。</p>
+</div>
+
+</body>
+</html>
